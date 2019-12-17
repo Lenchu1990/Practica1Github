@@ -50,9 +50,7 @@ public class Practica1Github {
                 }
             }
         }
-            System.out.println("¿quieres seguir?");
-            seguir=sc.nextLine().charAt(0);
-        }while(seguir != 's');
+          
 
         System.out.println("La temperatura media ha sido:" + suma / 7);
         System.out.println("La máxima fue de "+max+" grados el "+diasSemana[posMax]);
@@ -63,6 +61,10 @@ public class Practica1Github {
         } while (dia<1 || dia>7);
         
         System.out.println("La temperatura fue "+ temperaturas[dia-1] );
+        
+        System.out.println("¿quieres seguir?");
+            seguir=sc.nextLine().charAt(0);
+        }while(seguir != 's');
     }
     
 }
