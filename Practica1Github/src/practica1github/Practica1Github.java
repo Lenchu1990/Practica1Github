@@ -25,9 +25,12 @@ public class Practica1Github {
         int dia,posMax=0,posMin=0;
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.ENGLISH);
-
+        char seguir;
+        
+        do{
         System.out.println("Anota temperatura de la semana");
-
+        
+        
         for (int i = 0; i < temperaturas.length; i++) {
             System.out.println(diasSemana[i] + ":");
             temperaturas[i] = sc.nextDouble();
@@ -47,6 +50,9 @@ public class Practica1Github {
                 }
             }
         }
+            System.out.println("¿quieres seguir?");
+            seguir=sc.nextLine().charAt(0);
+        }while(seguir != 's');
 
         System.out.println("La temperatura media ha sido:" + suma / 7);
         System.out.println("La máxima fue de "+max+" grados el "+diasSemana[posMax]);
